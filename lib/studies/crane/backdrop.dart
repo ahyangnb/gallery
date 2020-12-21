@@ -96,10 +96,9 @@ class _FrontLayerState extends State<_FrontLayer> {
               ),
             ),
           ),
-          // TODO(shihaohong): Migrate flutter_staggered_grid_view to
-          // wire restorationId into BoxScrollView.
           child: StaggeredGridView.countBuilder(
             key: ValueKey('CraneListView-${widget.index}'),
+            restorationId: 'staggered-grid-view',
             crossAxisCount: crossAxisCount,
             crossAxisSpacing: 16.0,
             padding: isDesktop
